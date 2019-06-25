@@ -49,7 +49,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'first' => ['required', 'string', 'max:255'],
+            'last' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -64,18 +65,21 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'first' => $data['first'],
+            'last' => $data['last'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
     }
 
-    public function showRegistrationForm()
-    {
-        abort(403);
-    }
-
-    public function register() {
-        abort(403);
-    }
+    // NOTE: Uncomment these lines to disable the registration page
+    //
+    // public function showRegistrationForm()
+    // {
+    //     abort(403);
+    // }
+    //
+    // public function register() {
+    //     abort(403);
+    // }
 }
