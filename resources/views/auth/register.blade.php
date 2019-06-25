@@ -17,8 +17,8 @@
             <div class="form-group">
               <label for="first">First:</label>
               <input class="form-control" id="first" type="first" name="first" placeholder="First Name">
-              @error('name')
-                  <span class="invalid-feedback" role="alert">
+              @error('first')
+                  <span style="display: unset;" class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                   </span>
               @enderror
@@ -27,7 +27,7 @@
               <label for="last">Last:</label>
               <input class="form-control" id="last" type="last" name="last" placeholder="Last Name">
               @error('last')
-                  <span class="invalid-feedback" role="alert">
+                  <span style="display: unset;" class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                   </span>
               @enderror
@@ -36,7 +36,7 @@
               <label for="email">Email:</label>
               <input class="form-control" id="email" type="email" name="email" placeholder="Email Address">
               @error('email')
-                  <span class="invalid-feedback" role="alert">
+                  <span style="display: unset;" class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                   </span>
               @enderror
@@ -45,7 +45,7 @@
               <label for="password">Password: </label>
               <input class="form-control" type="password" name="password" placeholder="Password">
               @error('password')
-                  <span class="invalid-feedback" role="alert">
+                  <span style="display: unset;" class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                   </span>
               @enderror
@@ -54,7 +54,7 @@
               <label for="password_confirmation">Confirm Password: </label>
               <input class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password">
               @error('password_confirmation')
-                  <span class="invalid-feedback" role="alert">
+                  <span style="display: unset;" class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
                   </span>
               @enderror

@@ -17,10 +17,20 @@
             <div class="form-group">
               <label for="email">Email:</label>
               <input class="form-control" id="email" type="email" name="email" placeholder="Email Address">
+              @error('email')
+              <span style="display: unset;" class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
             </div>
+            @enderror
             <div class="form-group">
               <label for="password">Password: </label>
               <input class="form-control" type="password" name="password" placeholder="Password">
+              @error('password')
+              <span style="display: unset;" class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+              </span>
+              @enderror
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
           </form>

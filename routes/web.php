@@ -17,4 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource('alerts', 'DashboardController');
+Route::middleware('auth')->group(function() {
+  Route::resource('alerts', 'DashboardController');
+});
